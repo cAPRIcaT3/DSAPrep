@@ -46,3 +46,27 @@ public class PermutationCheck{
         }
     }
 }
+
+/*companion explanation
+
+- str1.toCharArray() : This method converts the strings 'str1' into an array of characters
+For exmaple, if 'str1' is 'abcde', it becomes
+['a', 'b', 'c', 'd', 'e']
+
+- for(char c: str1.toCharArray())': This is a "for-each" loop that iterates over
+each character 'c' in the array returned by 'toCharArray()'.
+
+'charCountMap.put(c, charCountMap.getOrDefault(c,0) + 1)':
+
+    - charCountMap is a HashMap where the key is a character ('c'), and the value is an
+      integer representing the count of that character.
+
+    - charCountMap.getOrDefault(c,0) : This retrieves the current count of 'c' from the
+      charCountMap. If 'c' is not yet in the map, it returns '0' (the default value)
+    
+    - charCountMap.put(c, charCountMap.getOrDefault(c,0) + 1): This increments the count
+      of the character 'c'by 1 and puts it back in the map.
+      
+Watch out for:
+Understanding the getOrDefault Method:It's a convenience method that avoids checking whether a key exists in the map before getting its value.
+*/
